@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive !important;
+}
+
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.video-background .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+svg {
+	font-family: "Oxanium", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 5s forwards;
+  text-shadow:  1px 3px 3px rgba(0, 0, 0, 1);
+	stroke-width: 2;
+	stroke: #000000;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(255,0,0,0); stroke: #99e2b4;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(255,0,0,0); stroke: #99e2b4; }
+	80%  {fill: rgba(255,0,0,0); stroke: #99e2b4; stroke-width: 3; }
+	100% {
+		fill: #99e2b4; stroke: #99e2b4;
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.line {
+  overflow: hidden; /* A szöveg törlődik a kereten belül */
+  border-right: .15em solid black; /* Kurzor */
+  white-space: nowrap; /* Nem törik a sorokra */
+  margin: 0 auto; /* Középre igazítás */
+  letter-spacing: .15em; /* Betűk közötti távolság */
+  animation: typing 3.5s steps(50, end), blink-caret .75s step-end forwards;
+  /* typing: a gépelési animáció, blink-caret: a kurzor villogása */
+}
+
+/* A gépelési animáció */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* A kurzor villogási animációja */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
